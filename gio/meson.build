@@ -1,9 +1,7 @@
 inc_dir = []
 gio_deps = []
 
-gio_deps += dependency ('gio-2.0')
 gio_deps += dependency ('gtk+-2.0')
-gio_deps += dependency ('glib-2.0')
 
 gio_deps += cc.find_library ('pthread')
 

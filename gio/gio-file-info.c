@@ -46,8 +46,8 @@ int main (int argc, char* argv[])
     //printf ("G_FILE_ATTRIBUTE_STANDARD_SYMBOLIC_ICON:             %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_STANDARD_SYMBOLIC_ICON));
     printf ("G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE:                %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE));
     printf ("G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE:           %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE));
-    printf ("G_FILE_ATTRIBUTE_STANDARD_SIZE:                        %30u\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_STANDARD_SIZE));
-    printf ("G_FILE_ATTRIBUTE_STANDARD_ALLOCATED_SIZE:              %30u\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_STANDARD_ALLOCATED_SIZE));
+    printf ("G_FILE_ATTRIBUTE_STANDARD_SIZE:                        %30lu\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_STANDARD_SIZE));
+    printf ("G_FILE_ATTRIBUTE_STANDARD_ALLOCATED_SIZE:              %30lu\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_STANDARD_ALLOCATED_SIZE));
     printf ("G_FILE_ATTRIBUTE_STANDARD_SYMLINK_TARGET:              %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_STANDARD_SYMLINK_TARGET));
     printf ("G_FILE_ATTRIBUTE_STANDARD_TARGET_URI:                  %30s\n", g_file_info_get_attribute_string(fileInfo, G_FILE_ATTRIBUTE_STANDARD_TARGET_URI));
     printf ("G_FILE_ATTRIBUTE_STANDARD_SORT_ORDER:                  %30d\n", g_file_info_get_attribute_int32(fileInfo, G_FILE_ATTRIBUTE_STANDARD_SORT_ORDER));
@@ -72,7 +72,7 @@ int main (int argc, char* argv[])
     printf ("G_FILE_ATTRIBUTE_MOUNTABLE_START_STOP_TYPE:            %30u\n", g_file_info_get_attribute_uint32(fileInfo, G_FILE_ATTRIBUTE_MOUNTABLE_START_STOP_TYPE));
     printf ("G_FILE_ATTRIBUTE_MOUNTABLE_CAN_POLL:                   %30s\n", g_file_info_get_attribute_boolean(fileInfo, G_FILE_ATTRIBUTE_MOUNTABLE_CAN_POLL)?"true":"false");
     printf ("G_FILE_ATTRIBUTE_MOUNTABLE_IS_MEDIA_CHECK_AUTOMATIC:   %30s\n", g_file_info_get_attribute_boolean(fileInfo, G_FILE_ATTRIBUTE_MOUNTABLE_IS_MEDIA_CHECK_AUTOMATIC)?"true":"false");
-    printf ("G_FILE_ATTRIBUTE_TIME_MODIFIED:                        %30u\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_TIME_MODIFIED));
+    printf ("G_FILE_ATTRIBUTE_TIME_MODIFIED:                        %30lu\n", g_file_info_get_attribute_uint64(fileInfo, G_FILE_ATTRIBUTE_TIME_MODIFIED));
     printf ("G_FILE_ATTRIBUTE_TIME_MODIFIED_USEC:                   %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_TIME_MODIFIED_USEC));
     printf ("G_FILE_ATTRIBUTE_TIME_ACCESS:                          %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_TIME_ACCESS));
     printf ("G_FILE_ATTRIBUTE_TIME_ACCESS_USEC:                     %30s\n", g_file_info_get_attribute_as_string(fileInfo, G_FILE_ATTRIBUTE_TIME_ACCESS_USEC));

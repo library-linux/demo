@@ -36,10 +36,8 @@ int main (int argc, int argv[])
         struct timespec modifyTime = statbuf.st_mtim;
         struct timespec accessTime = statbuf.st_atim;
 
-        printf ("最新访问: %d\n", accessTime.tv_sec);
-        printf ("最新修改: %d\n", modifyTime.tv_sec);
-
-
+        printf ("最新访问: %ld\n", accessTime.tv_sec);
+        printf ("最新修改: %ld\n", modifyTime.tv_sec);
     }
 
 

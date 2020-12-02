@@ -9,7 +9,7 @@
 #include <gio/gio.h>
 
 
-int main (int argc, char* argv)
+int main (int argc, char* argv[])
 {
     GError* error = NULL;
     GFile* fileSrc = g_file_new_for_path ("./aa");

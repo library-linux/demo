@@ -10,7 +10,7 @@
 void handle_error(GError *error) 
 {
     if(error != NULL) {
-        g_printf(error->message);
+        g_print(error->message);
         g_clear_error(&error);
     }
 }
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
     ioChannel = g_io_channel_new_file(src, "r", &error);
     handle_error(error);
     g_io_channel_read_to_end(ioChannel, &content, &length, NULL);
-    g_io_channel_close(ioChannel);
+    g_io_channel_shutdown(ioChannel, TRUE, NULL);
                                                         
     ioChannel = g_io_channel_new_file(dest, "w", &error);
     handle_error(error);
     g_io_channel_write_chars(ioChannel, content, -1, &length, NULL);
-    g_io_channel_close(ioChannel);
+    g_io_channel_shutdown(ioChannel, TRUE, NULL);
                                                                         
     g_free(content);
                                                                             

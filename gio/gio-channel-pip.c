@@ -52,7 +52,7 @@ void value_changed_callback(GtkSpinButton *spinButton, GIOChannel *channel)
 
     value = gtk_spin_button_get_value_as_int(spinButton);
     text = g_string_new("");
-    g_string_sprintf(text, "%d\n", value);
+    g_string_sprintf(text, "%ld\n", value);
 
     // 寫入資料至 GIOChannel
     ret_value = g_io_channel_write_chars(channel, text->str, -1, &length, NULL);

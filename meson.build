@@ -21,4 +21,7 @@ foreach h : headersck
 endforeach
 
 pkg = import ('pkgconfig')
+
 subdir ('gio')
+subdir ('dbus')
+subdir ('cairo')

@@ -7,13 +7,14 @@
 
 #include <glib.h>
 
-handle_error(GError *error) 
+void handle_error(GError *error) 
 {
     if(error != NULL) {
-        g_printf(error->message);
+        g_print(error->message);
         g_clear_error(&error);
     }
 }
+
 
 int main(int argc, char *argv[]) 
 {

@@ -45,8 +45,8 @@ int main (int arg, char* garv[])
     }
 
     printf ("========\n");
-    printf ("disk usage:%d --- %s\n", disk_usage, g_format_size(disk_usage));    // g_format_size 来自glib
-    printf ("num files:%d, num_dirs:%d\n", num_files, num_dirs);
+    printf ("disk usage:%lu --- %s\n", disk_usage, g_format_size(disk_usage));    // g_format_size 来自glib
+    printf ("num files:%ld, num_dirs:%ld\n", num_files, num_dirs);
     printf ("========\n");
     
 end:
