@@ -1,4 +1,4 @@
-project('demo', 'c', 'cpp', version : '0.0.0', meson_version : '>= 0.5.0',
+project('demo', 'c', 'cpp', version : '0.0.0', meson_version : '>= 0.51.0',
     default_options : [
         'buildtype=debugoptimized',
         'warning_level=1',
@@ -7,7 +7,8 @@ project('demo', 'c', 'cpp', version : '0.0.0', meson_version : '>= 0.5.0',
 )
 
 cc = meson.get_compiler('c')
-cpp = meson.get_compiler('cpp')
+#cpp = meson.get_compiler('cpp')
+pkg = import ('pkgconfig')
 
 configinc = include_directories('.')
 
@@ -20,7 +21,6 @@ foreach h : headersck
     endif
 endforeach
 
-pkg = import ('pkgconfig')
 
 subdir ('gio')
 subdir ('dbus')

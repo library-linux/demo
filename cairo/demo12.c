@@ -4,30 +4,9 @@
 > Mail    : dingjing@live.cn
 > Created Time: 2020年01月19日 星期日 16时28分04秒
  ************************************************************************/
-/*
- * draw.c draws the images in the "Drawing with cairo" section as part
- * of the the cairo tutorial
- * Copyright (C) 2007  Nis Martensen
- * Derived from draw.py
- * <http://www.tortall.net/mu/wiki/CairoTutorial/draw.py?raw>
- * Copyright (C) 2006-2007 Michael Urman
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-#include <string.h>
 #include <math.h>
 #include <cairo.h>
+#include <string.h>
 #include <cairo-svg.h>
 
 void diagram (char *name);

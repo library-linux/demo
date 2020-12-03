@@ -20,7 +20,7 @@ static void on_name_acquired (GDBusConnection *connection, const gchar *name, gp
 static gboolean on_handle_configure (Alarm *skeleton, GDBusMethodInvocation *invocation, guint seconds, gpointer user_data);
 static gboolean emit_alarm_cb (gpointer skeleton);
 
-void main (void)
+int main (int argc, char* argv[])
 {
     GMainLoop *loop;
 
@@ -29,6 +29,8 @@ void main (void)
             NULL, on_name_acquired, NULL, NULL, NULL);
 
     g_main_loop_run (loop);
+
+    return 0;
 }
 
 static void on_name_acquired (GDBusConnection *connection, const gchar *name, gpointer user_data)
@@ -44,12 +46,14 @@ static gboolean on_handle_configure (Alarm *skeleton, GDBusMethodInvocation *inv
 {
     if (alarm_get_activated (skeleton)) {
         g_dbus_method_invocation_return_error_literal (invocation, G_IO_ERROR, G_IO_ERROR_EXISTS, "Exists");
-        return;
+        return FALSE;
     }
 
     alarm_set_activated (skeleton, TRUE);
     g_timeout_add_seconds (seconds, emit_alarm_cb, skeleton);
     alarm_complete_configure (skeleton, invocation);
+
+    return TRUE;
 }
 
 static gboolean emit_alarm_cb (gpointer skeleton)

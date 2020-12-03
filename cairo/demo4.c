@@ -21,7 +21,7 @@ void star_path (cairo_t *cr);
 
 unsigned char image[STRIDE*HEIGHT];
 
-int main (void)
+int main (int argc, char* argv[])
 {
     cairo_surface_t *surface;
     cairo_t *cr;

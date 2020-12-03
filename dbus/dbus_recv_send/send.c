@@ -5,6 +5,7 @@
 > Created Time: 2019年12月06日 星期五 16时25分16秒
  ************************************************************************/
 #include <stdio.h>
+#include <string.h>
 #include <dbus/dbus.h>
 
 static void send_config(DBusConnection *connection)

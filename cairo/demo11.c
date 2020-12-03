@@ -12,7 +12,7 @@
 
 static void paint (GtkWidget* widget, GdkEventExpose *eev, gpointer data);
 
-int main (int argc, gchar *argv[])
+int main (int argc, char *argv[])
 {
     GtkWidget *window;
     GtkWidget *canvas;
