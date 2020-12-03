@@ -24,6 +24,8 @@ endforeach
 
 #subdir ('gio')
 #subdir ('gtk')
-subdir ('glib')
+#subdir ('glib')
 #subdir ('dbus')
 #subdir ('cairo')
+#subdir ('gobject')
+subdir ('gsettings')
