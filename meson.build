@@ -22,7 +22,8 @@ foreach h : headersck
 endforeach
 
 
-subdir ('gio')
-subdir ('gtk')
-subdir ('dbus')
-subdir ('cairo')
+#subdir ('gio')
+#subdir ('gtk')
+subdir ('glib')
+#subdir ('dbus')
+#subdir ('cairo')
