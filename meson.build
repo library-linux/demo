@@ -22,10 +22,11 @@ foreach h : headersck
 endforeach
 
 
+subdir ('pam')
 #subdir ('gio')
 #subdir ('gtk')
 #subdir ('glib')
 #subdir ('dbus')
 #subdir ('cairo')
 #subdir ('gobject')
-subdir ('gsettings')
+#subdir ('gsettings')
