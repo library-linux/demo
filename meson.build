@@ -23,5 +23,6 @@ endforeach
 
 
 subdir ('gio')
+subdir ('gtk')
 subdir ('dbus')
 subdir ('cairo')
